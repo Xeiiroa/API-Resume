@@ -10,7 +10,7 @@ router = APIRouter()
 @router.get('/endpoints')
 def endpoints(): 
     """retrurns all current endpoints and acts as the default and a description of each endpoint"""
-    return {'endpoints': [get_endpoint_info(route) for route in router.route]}
+    return {'endpoints': [{'path': route.path, 'name': route.name} for route in router.routes]}
     
     
 @router.get('/profile')
