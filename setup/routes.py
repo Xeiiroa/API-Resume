@@ -57,7 +57,14 @@ def projects(): #returns information for projects
         ]
         }]
     return projects
-    
+
+@router.get('/skills')
+@router.get('technical-skills')
+def technical_skills():
+    technical_skills = [{
+        'languages': ['Python', 'C', 'Java'],
+        'frameworks': ['Flask', 'FastAPI']
+    }]
 
 
     
