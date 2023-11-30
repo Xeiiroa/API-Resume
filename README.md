@@ -8,8 +8,6 @@ Welcome to my API-Resume, a project that converts my normal resume into a RESTfu
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Available Endpoints](#available-endpoints)
-- [Contributing](#contributing)
-- [License](#license)
 
 
 ## Getting Started
@@ -49,7 +47,7 @@ pip install -r requirements.txt
 
 4. run the FASTAPI app through uvicorn:
 ```bash
-uvicorn API-Resume:app --reload
+python -m uvicorn main:app --reload
 ```
 
 5. Run the link through postman to get a list of endpoints for the sections of the resume
@@ -57,10 +55,7 @@ uvicorn API-Resume:app --reload
 - Create a new request and set the request type, URL, headers, and body parameters.
 - Send the request and inspect the response.
 
-![endpoint overview]()
-
-
-### Available Endpoints
+![endpoint overview](endpoint_overview.png)
 
 
 
