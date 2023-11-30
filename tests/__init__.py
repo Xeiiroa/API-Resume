@@ -1,8 +1,13 @@
 import pytest
-from setup import app
+import __main__
 from fastapi.testclient import TestClient
 
-client = TestClient(app)
+app = getattr(__main__, 'app', None)
+if app is not None:
+    client = TestClient(app)
+else:
+    print("Variable not found in the main script.")
+
 
 class TestFixtures:
     
