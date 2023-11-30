@@ -9,18 +9,18 @@ router = APIRouter()
 @router.get('/api')
 @router.get('/')
 def endpoints(): 
-    """retrurns all current endpoints and acts as the default and a description of each endpoint"""
+    """Retrurns all current endpoints as well and a link to the repository"""
     message = [{'message': 'Success'},
     {
         'greeting': 'Welcome to my API resume here are my endpoints that all are tailored to a section of my complete resume',
         'documentationUrl': 'https://github.com/Xeiiroa/API-Resume',
         'endpoints': [
         {'method': "GET", 'path': "/api", 'description': "Describes all available endpoints"},
-        {'method': "GET", 'path': "/profile", 'description': "shows social media profiles"},
-        {'method': "GET", 'path': "/experience", 'description': "shows present and past work experience"},
-        {'method': "GET", 'path': "/education", 'description': "shows education"},
-        {'method': "GET", 'path': "/projects", 'description': "shows projects"},
-        {'method': "GET", 'path': "/skills", 'description': "shows technical skills"}
+        {'method': "GET", 'path': "/profile", 'description': "Shows social media profiles"},
+        {'method': "GET", 'path': "/experience", 'description': "Shows present and past work experience"},
+        {'method': "GET", 'path': "/education", 'description': "Shows education"},
+        {'method': "GET", 'path': "/projects", 'description': "Shows projects"},
+        {'method': "GET", 'path': "/skills", 'description': "Shows technical skills"}
         ]
     }]
     return message
@@ -44,7 +44,7 @@ def education():
     {
         'school': os.getenv('SCHOOL_1_NAME'),
         'degree': 'Associate of Science in Computer Science',
-        'year': '2023-2025',
+        'Grad year': '2025',
         'location': os.getenv('SCHOOL_1_LOCATION')
     }]
 
@@ -79,7 +79,7 @@ def projects(): #returns information for projects
             'title': 'API Resume',
             'year': 'November 2023',
             'description': 'A resume converted to API Format',
-            'technologies': ['Python', 'FastAPI','Uvicorn', 'HTML', 'CSS'], #can remove html css
+            'technologies': ['Python', 'FastAPI','Uvicorn'], #can remove html css
             'github_repo': 'https://github.com/Xeiiroa/API-Resume'
         }
         ]
