@@ -1,6 +1,5 @@
-from setup import create_api
+from fastapi import FastAPI
+from setup import router
 
-
-if __name__ == "__main__":
-    api = create_api()
-    api.run()
+app = FastAPI()
+app.include_router(router)
