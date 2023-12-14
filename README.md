@@ -58,5 +58,14 @@ python -m uvicorn main:app --reload
 ![endpoint overview](endpoint_overview.png)
 
 
+### Wip
+
+- Creating a database to hold data in a more dynamic way
+
+- adding post and delete methods for updates to the resume with new experience and removals of things as a portfolio grows
+
+
+
+
 
 
